@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
 
     <script type="module" src="/build/selections-visuels.esm.js"></script>
     <script nomodule src="/build/selections-visuels.js"></script>
-  </head>
-  <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  </body>
+    <script type="text/javascript" src='build/jsonVariable.js'></script>
+    <link rel="stylesheet" type="text/css" href="build/plusVisuel.css">
+
+</head>
+
+<body>
+    <my-button age="" last="''Selections visuels"></my-button>
+</body>
+
+<script type="text/javascript">
+    /*
+                                        function parseJsonFile() {
+                                            var jsonFile = document.getElementById("jsonFile").value;
+                                            var jsonFile = jsonFile.replace(/\n/g, " ");
+
+                                        }
+                                        console.log(jsonFile);
+                                        console.log(jsonFile.length);
+                                        for (i = 0; i < jsonFile.length; i++) {
+                                            console.log(jsonFile[i].name);
+                                        }
+                                        var jsonFile = jsonFile.slice(1, jsonFile.length);
+                                        console.log(jsonFile);
+                                        console.log(jsonFile.length);
+                                        for (i = 0; i < jsonFile.length; i++) {
+                                            console.log(jsonFile[i].name);
+                                        }
+                                        console.log(jsonFile);
+                     function selectBox() {
+                        var selectBox = document.getElementById("selectBox");
+                        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+                        console.log(selectedValue);
+                    }
+                                      */
+    var picks = require('./jsonVariable.js');
+</script>
+
+<my-button>Action 1</my-button>
+<my-menu>
+    <!-- ... -->
+    <my-menu-item>
+        <my-button disabled>Action 3</my-button>
+    </my-menu-item>
+</my-menu>
+
+<body>
+    <my-menu>
+        <my-menu-item>
+            <my-button>Action 1</my-button>
+        </my-menu-item>
+
+        <my-menu-item>
+            <my-button>Action 2</my-button>
+        </my-menu-item>
+
+        <my-menu-item>
+            <my-button>Action 3</my-button>
+        </my-menu-item>
+    </my-menu>
+</body>
+
 </html>
