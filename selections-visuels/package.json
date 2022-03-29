@@ -26,7 +26,9 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "2.14.2"
+    "@debtcollective/dc-dropdown-component": "^1.7.0",
+    "@stencil/core": "2.14.2",
+    "requirejs": "^2.3.6"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
