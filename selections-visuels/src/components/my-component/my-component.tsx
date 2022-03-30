@@ -1,10 +1,13 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
+//import { Prop, State, Watch } from '@stencil/core';
+
 
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
   shadow: true,
+
 })
 export class MyComponent {
   /**
@@ -29,4 +32,5 @@ export class MyComponent {
   render() {
     return <div>Hello, World! I'm {this.getText()}</div>;
   }
+
 }

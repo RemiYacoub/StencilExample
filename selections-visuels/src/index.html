@@ -10,6 +10,30 @@
     <script nomodule src="/build/selections-visuels.js"></script>
     <link rel=" stylesheet " type="text/css " href="{{ asset('css/style.css') }} ">
 
+    <head>
+        <todo-list></todo-list>
+
+        <script type="module">
+            import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@ionic/core/loader/index.es2017.mjs'; defineCustomElements();
+        </script>
+    </head>
+
+    <body>
+        <ion-toggle></ion-toggle>
+    </body>
+
+    <html>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic.js"></script>
+    </head>
+
+    <body>
+        <ion-toggle></ion-toggle>
+    </body>
+
+    </html>
+
 </head>
 
 <body>
@@ -17,11 +41,36 @@
 </body>
 
 <script type="text/javascript">
-    import {
-        version
-    } from './datum.json'
+    const todoListElement = document.querySelector('todo-list');
+    todoListElement.myObject = {};
+    todoListElement.myArray = [];
+
 
     /*
+        function readJSFileJsonObject(file) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        var jsonObject = JSON.parse(allText);
+                        console.log(jsonObject);
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+
+        const stringJson = readJSFileJsonObject("dist/types/utils/visualJsonData.js");
+        var jsonObject = JSON.parse(stringJson, 'utf8');
+        console.log(jsonObject);
+    */
+    /*
+    fs.readFile(filePath, function(error, content) {
+        var data = JSON.parse(content);
+        console.log(data.collection.length);
+    });
     import {
         data
     } from './datum.json';
