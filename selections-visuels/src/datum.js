@@ -1,4 +1,4 @@
-{
+const data = {
     "Bernardo": {
         "valeur": "age",
         "type": "number"
@@ -9,10 +9,10 @@
     },
     "Delphina": {
         "valeur": "texture",
-        "type": "velour"
+        "type": "gradient"
     },
     "Gonzalo": {
         "valeur": "age",
-        "type": "discreet"
+        "type": "continuum"
     }
 }

@@ -8,9 +8,7 @@
 
     <script type="module" src="/build/selections-visuels.esm.js"></script>
     <script nomodule src="/build/selections-visuels.js"></script>
-    <script type="text/javascript" src='../datum.json'></script>
-    <link rel=" stylesheet " type="text/css " href="../styles.css ">
-
+    <link rel=" stylesheet " type="text/css " href="{{ asset('css/style.css') }} ">
 
 </head>
 
@@ -18,19 +16,27 @@
     <my-button age=" " last=" ''Selections visuels "></my-button>
 </body>
 
+<script type="text/javascript">
+    import {
+        version
+    } from './datum.json'
 
-<script type="text/javascript ">
     /*
-                        var data = JSON.parse(datum.json);
-                        alert(data.json);
-                        alert(data[0].age);
-                        //alert(data[1].);
-                        alert(data[1].age);
-                    */
+    import {
+        data
+    } from './datum.json';
 
-    fetch("utils/datum.json")
+    let dataFile = data;
+    var data = JSON.parse(dataFile);
+    alert(data.json);
+    alert(data[0].age);
+    //alert(data[1].);
+    alert(data[1].age);
+
+    fetch("./datum.json")
         .then(response => response.json())
         .then(json => console.log(json));
+    */
 </script>
 
 <my-button>Action 1</my-button>

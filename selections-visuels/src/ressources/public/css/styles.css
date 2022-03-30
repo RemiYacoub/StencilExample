@@ -46,7 +46,6 @@ h2 {
 
 .selected::after {
     content: "";
-    background: url("img/arrow-down.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;

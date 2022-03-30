@@ -1,6 +1,8 @@
 import { Config } from '@stencil/core';
+import json from '@rollup/plugin-json'
 
 export const config: Config = {
+  plugins: [json()],
   namespace: 'selections-visuels',
   outputTargets: [
     {

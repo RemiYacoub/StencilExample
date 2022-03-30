@@ -1,5 +1,7 @@
 {
+
   "compilerOptions": {
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
