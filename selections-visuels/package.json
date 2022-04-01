@@ -28,6 +28,7 @@
   "dependencies": {
     "@debtcollective/dc-dropdown-component": "^1.7.0",
     "@stencil/core": "2.14.2",
+    "choicesjs-stencil": "^1.5.1",
     "requirejs": "^2.3.6"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../../utils/utils';
+
 //import { Prop, State, Watch } from '@stencil/core';
 
 
@@ -26,11 +27,14 @@ export class MyComponent {
   @Prop() last: string;
 
   private getText(): string {
+    require('choicesjs-stencil');
+
     return format(this.first, this.middle, this.last);
   }
 
   render() {
     return <div>Hello, World! I'm {this.getText()}</div>;
+
   }
 
 }

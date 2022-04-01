@@ -8,13 +8,15 @@
 
     <script type="module" src="/build/selections-visuels.esm.js"></script>
     <script nomodule src="/build/selections-visuels.js"></script>
-    <link rel=" stylesheet " type="text/css " href="{{ asset('css/style.css') }} ">
+    <link rel=" stylesheet " type="text/css " href="../../../assets/visualJsonData.json">
 
     <head>
         <todo-list></todo-list>
+        <choicesjs-stencil type="single"></choicesjs-stencil>
 
         <script type="module">
             import { defineCustomElements } from 'https://cdn.jsdelivr.net/npm/@ionic/core/loader/index.es2017.mjs'; defineCustomElements();
+
         </script>
     </head>
 
@@ -32,6 +34,10 @@
         <ion-toggle></ion-toggle>
     </body>
 
+    <form name="form">
+        <choicesjs-stencil name="select" values="foo,bar"></choicesjs-stencil>
+    </form>
+
     </html>
 
 </head>
@@ -44,6 +50,37 @@
     const todoListElement = document.querySelector('todo-list');
     todoListElement.myObject = {};
     todoListElement.myArray = [];
+
+
+
+
+
+
+
+    var element = document.querySelector('choicesjs-stencil');
+
+    element.choices = [{
+        value: '',
+        label: 'Pick an item...',
+        placeholder: true
+    }, {
+        value: 'foo',
+        label: 'Foo'
+    }, {
+        value: 'bar',
+        label: 'Bar'
+    }, {
+        value: 'qux',
+        label: 'Qux'
+    }];
+
+    element.disable();
+
+
+
+
+
+
 
 
     /*
